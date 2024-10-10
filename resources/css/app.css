@@ -1,0 +1,14 @@
+.product-card {
+    text-align: center; /* Центрируем текст и изображения */
+    border: 1px solid #ccc; /* Пример оформления */
+    padding: 15px;
+    margin: 15px;
+    border-radius: 5px;
+}
+
+.product-image {
+    width: 100px; /* Ширина изображения */
+    height: auto; /* Высота автоматически в зависимости от ширины */
+    display: block; /* Делаем изображение блочным элементом */
+    margin: 0 auto; /* Центрируем изображение */
+}
