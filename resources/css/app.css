@@ -1,14 +1,13 @@
-.product-card {
-    text-align: center; /* Центрируем текст и изображения */
-    border: 1px solid #ccc; /* Пример оформления */
-    padding: 15px;
-    margin: 15px;
-    border-radius: 5px;
+.card {
+    text-align: center; /* Выравнивание текста по центру */
+    border: 1px solid #ddd; /* Граница карточки */
+    border-radius: 8px; /* Скругление углов */
+    overflow: hidden; /* Скрыть переполнение (если изображение слишком большое) */
 }
 
-.product-image {
-    width: 100px; /* Ширина изображения */
-    height: auto; /* Высота автоматически в зависимости от ширины */
-    display: block; /* Делаем изображение блочным элементом */
-    margin: 0 auto; /* Центрируем изображение */
+.card img {
+    width: 100px; /* Увеличьте ширину изображения */
+    height: 100px; /* Увеличьте высоту изображения */
+    object-fit: cover; /* Это сохраняет пропорции изображения */
+    margin: 0 auto; /* Центрирование изображения */
 }
