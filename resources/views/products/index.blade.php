@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Product List</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}"> <!-- Подключите свой CSS файл -->
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
 <body>
 @include('layouts.app')
@@ -26,6 +26,13 @@
                         <p class="card-text">{{ Str::limit($product->description, 100) }}</p>
                         <p class="product-price"><strong>Price: </strong>${{ $product->price }}</p>
                         <a href="{{ route('products.show', $product->id) }}" class="btn btn-primary mt-auto">View Product</a>
+                        <form action="{{ route('cart.add') }}" method="POST" class="mt-3">
+                            @csrf
+                            <input type="hidden" name="product_id" value="{{ $product->id }}">
+                            <input type="hidden" name="product_name" value="{{ $product->name }}">
+                            <input type="hidden" name="product_price" value="{{ $product->price }}">
+                            <button type="submit" class="btn btn-success">Add to Cart</button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -33,10 +40,5 @@
     </div>
 </div>
 
-
-
-
-
 </body>
 </html>
-
