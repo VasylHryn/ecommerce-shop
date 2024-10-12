@@ -16,3 +16,6 @@ Route::get('/contacts', function() {
     return view('contacts');
 })->name('contacts');
 
+Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
+Route::post('/cart', [CartController::class, 'add'])->name('cart.add');
+Route::post('/cart/remove', [CartController::class, 'remove'])->name('cart.remove');
