@@ -22,6 +22,13 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('contacts') }}">Contacts</a>
                     </li>
+                    <li class="nav-item">
+    <a class="nav-link" href="{{ route('cart.index') }}">
+        Cart
+        <span class="badge bg-secondary">{{ session('cart') ? count(session('cart')) : 0 }}</span>
+    </a>
+</li>
+
                 </ul>
             </div>
         </div>
