@@ -14,16 +14,18 @@
 <div class="container">
     <div class="row">
         @foreach($products as $product)
-            <div class="col-md-4 mb-4">
-                <div class="card single-product"> <!-- Добавили класс single-product -->
-                    @if ($product->image)
-                        <img src="{{ asset('storage/' . $product->image) }}" alt="{{ $product->name }}" class="card-img-top" />
-                    @endif
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card my-5 single-product">
+                    <a href="{{ route('products.show', $product->id) }}" class="card-link">
+                        @if ($product->image)
+                            <img src="{{ asset('storage/' . $product->image) }}" alt="{{ $product->name }}" class="card-img">
+                        @endif
+                    </a>
                     <div class="card-body">
-                        <h5 class="card-title">{{ $product->name }}</h5>
+                        <h4 class="card-title">{{ $product->name }}</h4>
                         <p class="card-text">{{ Str::limit($product->description, 100) }}</p>
                         <p class="product-price"><strong>Price: </strong>${{ $product->price }}</p>
-                        <a href="{{ route('products.show', $product->id) }}" class="btn btn-primary">View Product</a>
+                        <a href="{{ route('products.show', $product->id) }}" class="btn btn-primary mt-auto">View Product</a>
                     </div>
                 </div>
             </div>
@@ -31,5 +33,10 @@
     </div>
 </div>
 
+
+
+
+
 </body>
 </html>
+

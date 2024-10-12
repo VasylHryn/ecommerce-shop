@@ -5,10 +5,15 @@
     display: flex;
     flex-direction: column; /* Вертикальное размещение */
 }
-
-.card-img-top {
-    max-width: 100%; /* Ограничение ширины изображения */
-    max-height: 200px; /* Максимальная высота для изображений */
-    object-fit: cover; /* Сохранение пропорций */
-    margin: 0 auto; /* Центрирование изображения */
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
 }
+
+.card-img {
+    height: 200px; /* Можно настроить нужную высоту */
+    object-fit: cover;
+}
+
