@@ -1,9 +1,9 @@
 .single-product {
-    border: 1px solid #e0e0e0; /* Рамка для карточек */
-    border-radius: 10px; /* Закругленные углы */
-    height: 100%; /* Занимает всю высоту */
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    height: 100%;
     display: flex;
-    flex-direction: column; /* Вертикальное размещение */
+    flex-direction: column;
 }
 .card-body {
     display: flex;
@@ -13,9 +13,11 @@
 }
 
 .card-img {
-    height: 200px; /* Можно настроить нужную высоту */
+    height: 200px;
     object-fit: cover;
 }
 
-
-
+.badge-custom {
+    background-color: #1bc400;
+    color: #ffffff;
+}
