@@ -15,30 +15,33 @@
     <div class="row">
         @foreach($products as $product)
             <div class="col-md-6 col-lg-4 mb-4">
-                <div class="card my-5 single-product">
+                <div class="card h-100 d-flex flex-column">
                     <a href="{{ route('products.show', $product->id) }}" class="card-link">
                         @if ($product->image)
-                            <img src="{{ asset('storage/' . $product->image) }}" alt="{{ $product->name }}" class="card-img">
+                            <img src="{{ asset('storage/' . $product->image) }}" alt="{{ $product->name }}" class="card-img-top img-fluid">
                         @endif
                     </a>
-                    <div class="card-body">
+                    <div class="card-body d-flex flex-column">
                         <h4 class="card-title">{{ $product->name }}</h4>
                         <p class="card-text">{{ Str::limit($product->description, 100) }}</p>
                         <p class="product-price"><strong>Price: </strong>${{ $product->price }}</p>
-                        <a href="{{ route('products.show', $product->id) }}" class="btn btn-primary mt-auto">View Product</a>
-                        <form action="{{ route('cart.add') }}" method="POST" class="mt-3">
-                            @csrf
-                            <input type="hidden" name="product_id" value="{{ $product->id }}">
-                            <input type="hidden" name="product_name" value="{{ $product->name }}">
-                            <input type="hidden" name="product_price" value="{{ $product->price }}">
-                            <button type="submit" class="btn btn-success">Add to Cart</button>
-                        </form>
+                        <div class="mt-auto">
+                            <a href="{{ route('products.show', $product->id) }}" class="btn btn-primary mb-2">View Product</a>
+                            <form action="{{ route('cart.add') }}" method="POST">
+                                @csrf
+                                <input type="hidden" name="product_id" value="{{ $product->id }}">
+                                <input type="hidden" name="product_name" value="{{ $product->name }}">
+                                <input type="hidden" name="product_price" value="{{ $product->price }}">
+                                <button type="submit" class="btn btn-success">Add to Cart</button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
         @endforeach
     </div>
 </div>
+
 
 </body>
 </html>

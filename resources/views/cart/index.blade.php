@@ -23,6 +23,13 @@
                         <td>${{ number_format($item['price'], 2) }}</td>
                         <td>{{ $item['quantity'] }}</td>
                         <td>${{ number_format($item['price'] * $item['quantity'], 2) }}</td>
+                        <td>
+                            <form action="{{ route('cart.remove') }}" method="POST">
+                                @csrf
+                                <input type="hidden" name="product_id" value="{{ $id }}">
+                                <button type="submit" class="btn btn-danger btn-sm">Remove</button>
+                            </form>
+                        </td>
                         </td>
                     </tr>
                 @endforeach

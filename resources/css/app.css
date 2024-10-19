@@ -1,22 +1,39 @@
+/* Карточка товара */
 .single-product {
     border: 1px solid #e0e0e0;
     border-radius: 10px;
-    height: 100%;
     display: flex;
     flex-direction: column;
+    height: 100%;
 }
+
+/* Стили для тела карточки */
 .card-body {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
+    flex-grow: 1;
 }
 
-.card-img {
-    height: 200px;
-    object-fit: cover;
+/* Стили для изображения карточки */
+.product-card img {
+    width: 100%;
+    height: 200px; /* Задайте желаемую высоту */
+    object-fit: contain; /* Сохраняет пропорции изображения */
 }
 
+/* Детали товара */
+.product-details {
+    flex-grow: 1;
+    margin-bottom: 10px;
+}
+
+/* Кнопки */
+.product-card .buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Кастомный бейдж */
 .badge-custom {
     background-color: #1bc400;
     color: #ffffff;
