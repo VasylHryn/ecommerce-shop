@@ -19,3 +19,4 @@ Route::get('/contacts', function() {
 Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
 Route::post('/cart', [CartController::class, 'add'])->name('cart.add');
 Route::post('/cart/remove', [CartController::class, 'remove'])->name('cart.remove');
+Route::get('/search', [ProductController::class, 'search'])->name('products.search');

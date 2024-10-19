@@ -8,30 +8,35 @@
     @vite(['resources/js/app.js', 'resources/css/app.css']) <!-- Измени это на свой путь -->
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
-            <a class="navbar-brand" href="{{ url('/') }}">Store</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('products.index') }}">Products</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('contacts') }}">Contacts</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('cart.index') }}">
-                            Cart
-                            <span class="badge badge-custom">{{ session('cart') ? count(session('cart')) : 0 }}</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <a class="navbar-brand" href="{{ url('/') }}">E-Store</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('products.index') }}">Products</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('contacts') }}">Contacts</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('cart.index') }}">
+                        Cart
+                        <span class="badge badge-custom">{{ session('cart') ? count(session('cart')) : 0 }}</span>
+                    </a>
+                </li>
+            </ul>
+            <!-- Форма поиска -->
+            <form class="d-flex ms-3" action="{{ route('products.search') }}" method="GET">
+                <input class="form-control me-2" type="search" name="query" placeholder="Search products" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
         </div>
-    </nav>
+    </div>
+</nav>
 
     <div class="container mt-4">
         @yield('content')
