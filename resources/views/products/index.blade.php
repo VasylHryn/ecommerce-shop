@@ -15,7 +15,7 @@
     <div class="row">
         @foreach($products as $product)
             <div class="col-md-6 col-lg-4 mb-4">
-                <div class="card h-100 d-flex flex-column">
+                <div class="card h-100 d-flex flex-column product-card">
                     <a href="{{ route('products.show', $product->id) }}" class="card-link">
                         @if ($product->image)
                             <img src="{{ asset('storage/' . $product->image) }}" alt="{{ $product->name }}" class="card-img-top img-fluid">
@@ -41,6 +41,7 @@
         @endforeach
     </div>
 </div>
+
 
 
 </body>
