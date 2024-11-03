@@ -4,6 +4,10 @@
 
 **This is a simple E-Commerce Shop** built with Laravel. It allows users to browse products, add them to the cart, and manage their shopping experience.
 
+## Current look
+
+![image](https://github.com/user-attachments/assets/4ec8428a-013e-43c4-8d3d-02ae018a32e5)
+
 ## Features
 
 - **Product Listing:** Browse through a list of products with descriptions and prices.
