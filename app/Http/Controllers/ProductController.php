@@ -14,9 +14,13 @@ class ProductController extends Controller
         return view('products.index', compact('products'));
     }
 
-    public function show(Product $product)
+    public function show($id)
     {
-        return view('products.show', compact('product'));
+        $product = Product::findOrFail($id);
+
+        $otherProducts = Product::where('id', '!=', $id)->inRandomOrder()->limit(4)->get();
+
+        return view('products.show', compact('product', 'otherProducts'));
     }
 
     public function store(Request $request)

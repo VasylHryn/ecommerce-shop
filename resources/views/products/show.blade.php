@@ -31,9 +31,28 @@
             </form>
         </div>
     </div>
+
+    <div class="mt-5">
+        <h2>Other Products</h2>
+        <div class="row">
+            @foreach($otherProducts as $otherProduct)
+                <div class="col-md-3">
+                    <div class="card mb-4">
+                        @if ($otherProduct->image)
+                            <img src="{{ asset('storage/' . $otherProduct->image) }}" alt="{{ $otherProduct->name }}" class="card-img-top" style="height: 200px; object-fit: contain;">
+                        @endif
+                        <div class="card-body">
+                            <h5 class="card-title">{{ $otherProduct->name }}</h5>
+                            <p class="card-text">${{ number_format($otherProduct->price, 2) }}</p>
+                            <a href="{{ route('products.show', $otherProduct->id) }}" class="btn btn-outline-primary btn-sm">View Product</a>
+                        </div>
+                    </div>
+                </div>
+            @endforeach
+        </div>
+    </div>
 </div>
 @endsection
-
 
 </body>
 </html>
