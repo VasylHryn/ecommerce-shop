@@ -23,7 +23,6 @@
 }
 
 
-
 .product-details {
     flex-grow: 1;
     margin-bottom: 10px;
@@ -40,6 +39,7 @@
     background-color: #198754;
     color: #ffffff;
 }
+
 .pagination .page-item .page-link {
     padding: 0.5rem 0.75rem;
     font-size: 0.875rem;
@@ -48,4 +48,16 @@
 .pagination .page-item.active .page-link {
     background-color: #007bff;
     border-color: #007bff;
+}
+
+.footer {
+    background-color: #f8f9fa;
+    color: #6c757d;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 0.9rem;
 }

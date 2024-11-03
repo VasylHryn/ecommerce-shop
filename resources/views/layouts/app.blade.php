@@ -29,13 +29,14 @@
                     </a>
                 </li>
             </ul>
-            <!-- Форма поиска -->
+
             <form class="d-flex ms-3" action="{{ route('products.search') }}" method="GET">
                 <input class="form-control me-2" type="search" name="query" placeholder="Search products" aria-label="Search">
                 <button class="btn btn-outline-success" type="submit">Search</button>
             </form>
         </div>
     </div>
+
 </nav>
 
     <div class="container mt-4">
@@ -43,5 +44,6 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>

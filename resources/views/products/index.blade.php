@@ -51,7 +51,11 @@
 </div>
 </div>
 
-
+<footer class="footer">
+    <div class="container">
+        <p>© {{ date('Y') }} E-Store. All rights reserved.</p>
+    </div>
+</footer>
 
 </body>
 </html>
