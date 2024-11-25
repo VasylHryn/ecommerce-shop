@@ -18,9 +18,11 @@
                 <div class="card h-100 product-card">
                     <a href="{{ route('products.show', $product->id) }}" class="card-link">
                         @if ($product->image)
-                            <img src="{{ asset('storage/' . $product->image) }}" alt="{{ $product->name }}" class="card-img-top img-fluid">
+                            <img src="{{ asset('storage/' . $product->image) }}" alt="{{ $product->name }}"
+                                 class="card-img-top img-fluid">
                         @else
-                            <img src="https://via.placeholder.com/300x200" alt="No image" class="card-img-top img-fluid">
+                            <img src="https://via.placeholder.com/300x200" alt="No image"
+                                 class="card-img-top img-fluid">
                         @endif
                     </a>
                     <div class="card-body d-flex flex-column">
@@ -28,10 +30,13 @@
                         <p class="card-text text-muted">{{ Str::limit($product->description, 100) }}</p>
                         <p class="product-price"><strong>Price: </strong>${{ $product->price }}</p>
                         <div class="mt-auto">
-                            <a href="{{ route('products.show', $product->id) }}" class="btn btn-outline-primary w-100 mb-2">View Product</a>
+                            <a href="{{ route('products.show', $product->id) }}"
+                               class="btn btn-outline-primary w-100 mb-2">View Product</a>
                             <form action="{{ route('cart.add') }}" method="POST">
                                 @csrf
                                 <input type="hidden" name="product_id" value="{{ $product->id }}">
+                                <input type="hidden" name="product_name" value="{{ $product->name }}">
+                                <input type="hidden" name="product_price" value="{{ $product->price }}">
                                 <button type="submit" class="btn btn-success w-100">Add to Cart</button>
                             </form>
                         </div>
