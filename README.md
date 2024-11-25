@@ -6,8 +6,8 @@
 
 ## Current look
 
-![2](https://github.com/user-attachments/assets/af80be0e-87b4-4f8d-a497-b1dac9e096a2)
-![1](https://github.com/user-attachments/assets/fd1ecac1-5495-4479-aff1-785632d67f37)
+![image](https://github.com/user-attachments/assets/38929d6c-1f46-4168-9d44-4839de2565d1)
+![image](https://github.com/user-attachments/assets/8275d88a-e298-49f5-b129-6b7b0da13dd1)
 
 
 ## Features
