@@ -1,6 +1,6 @@
 # 🚧 E-Commerce Shop (Still in Development) 🚧
 
-## Descripti
+## Description
 
 **This is a simple E-Commerce Shop** built with Laravel. It allows users to browse products, add them to the cart, and manage their shopping experience.
 
